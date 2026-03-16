@@ -216,7 +216,6 @@ func (i *Item) GetCord() (*Position, error) {
 
 	// get coord with centring
 	switch pos {
-<<<<<<< HEAD
 	case "bottom":
 		result.CX = result.X + dock.X + result.RelX + result.W/2
 		result.CY = result.Y + margin + dock.H + (hyprMonitor.Height - (dock.Y + dock.H))
@@ -228,13 +227,6 @@ func (i *Item) GetCord() (*Position, error) {
 		result.CY = result.Y + dock.Y + result.RelY + result.H/2
 	case "right":
 		result.CX = result.X + margin + dock.W + (hyprMonitor.Width - (dock.X + dock.W))
-=======
-	case "bottom", "top":
-		result.CX = dock.X + result.RelX + result.W/2
-		result.CY = result.Y + margin + dock.H
-	case "left", "right":
-		result.CX = result.X + margin + dock.W
->>>>>>> e5dc916 (Added fixes from testing branches)
 		result.CY = result.Y + dock.Y + result.RelY + result.H/2
 	}
 
